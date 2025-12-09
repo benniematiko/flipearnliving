@@ -6,17 +6,19 @@ import MarketPlace from "./MarketPlace";
 import MyListings from "./MyListings";
 import Messages from "./Messages";
 import MyOrders from "./MyOrders";
+import HeroSection from "../components/HeroSection";
+
+import TopSection from "../components/TopSection";
 
 const Home = () => {
+ 
   return (
     <div>
 
-      <div>
-        Karuiru Advocates
-      </div>
+      
 
-
-
+    
+      <HeroSection />
 
       <ListingDetails />
 

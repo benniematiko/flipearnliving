@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 
 import Home from './pages/Home'
 import Listing from './pages/Listing'
@@ -11,10 +11,19 @@ import Messages from './pages/Messages'
 import MyListings from './pages/MyListings'
 import MyOrders from './pages/MyOrders'
 import Loading from './pages/Loading'
+import Navbar from './components/Navbar'
+
+
 
 const App = () => {
+
+  
+
+  const { pathname} = useLocation()
+  
   return (
     <div>
+      {!pathname.includes('/admin') && <Navbar /> }
       <Routes>       
 
         <Route path="/" element={<Home />}/>
